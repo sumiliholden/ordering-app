@@ -3,11 +3,14 @@
     <h1>Order Ghorls</h1>
     <h3>Click to order</h3>
     <b-table :items="items" :fields="fields" striped responsive="sm">
-      <!-- I want to add this button below but it wont work. my function for this is after the button clicked, 
-      the ordered data inside items will change to opposite value? -->
-      <!-- <b-button size="sm" @click="!this.ordered">
+
+      <!-- If you want to add something to each row of one column,
+          you can specify it inside another nested template then call v-slot:cell(NameOfTheFieldHere) -->
+      <template v-slot:cell(action)>
+        <b-button size="sm" @click="!this.ordered" variant="success">
           {{ ordered ? "Cancel" : "Order" }}
-        </b-button> -->
+        </b-button>
+      </template>
     </b-table>
     <YourOrders :showOrders="showOrders" />
   </div>

@@ -15,7 +15,7 @@ module.exports = {
     "space-before-function-paren": ["error", "never"],
     "quotes": 0,
     "semi": 0,
-    "no-trailing-spaces": [false, { "skipBlankLines": true }],
+    "no-trailing-spaces" : 0,
     "space-before-function-paren": process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
