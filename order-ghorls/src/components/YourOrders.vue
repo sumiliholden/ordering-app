@@ -4,20 +4,24 @@
       <b-list-group-item
         class="d-flex justify-content-between align-items-center"
       >
-        {{item.name}}
-        <b-badge variant="primary" pill>{{item.price}}</b-badge>
+        {{ item.name }}
+        <h5>₱{{ item.price }}</h5>
       </b-list-group-item>
-        
     </b-list-group>
-    <h3>Total</h3>
-        <b-badge variant="primary" pill>₱1000</b-badge>
+    <b-list-group-item
+      class="d-flex justify-content-between align-items-center"
+    >
+      <h3>Total</h3>
+      <h3>₱{{ total }}</h3>
+    </b-list-group-item>
   </div>
 </template>
 <script>
 export default {
   props: {
     showOrders: Boolean,
-    items: Array
+    items: Array,
+    total: Number
   }
 };
 </script>
